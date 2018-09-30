@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ViandaController@index');
 
 Route::resource('vianda', 'ViandaController');
 Route::resource('persona', 'PersonaController');

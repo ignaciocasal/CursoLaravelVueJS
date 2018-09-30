@@ -31,7 +31,8 @@ class PedidoController extends Controller
     public function create()
     {
         $personas = Persona::all();
-        return view('pedido.create', compact('personas'));
+        $viandas = Vianda::all();
+        return view('pedido.create', compact('personas', 'viandas'));
     }
 
     /**
@@ -74,7 +75,9 @@ class PedidoController extends Controller
     {
         //
         $pedido = Pedido::find($id);
-        return view('pedido.edit',compact('pedido'));
+        $personas = Persona::all();
+        $viandas = Vianda::all();
+        return view('pedido.edit',compact('pedido', 'personas', 'viandas'));
     }
 
     /**

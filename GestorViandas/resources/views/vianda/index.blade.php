@@ -28,7 +28,7 @@
                                             <td>{{$vianda->nombre}}</td>
                                             <td>{{$vianda->descripcion}}</td>
                                             <td>{{$vianda->precio}}</td>
-                                            <td>{{$vianda->vegetariana}}</td>
+                                            <td>@if($vianda->vegetariana == 'on') SI @else NO @endif</td>
                                             <td><a class="btn btn-primary btn-xs" href="{{action('ViandaController@edit', $vianda->id)}}" ><span class="glyphicon glyphicon-pencil"></span></a></td>
                                             <td>
                                                 <form action="{{action('ViandaController@destroy', $vianda->id)}}" method="post">

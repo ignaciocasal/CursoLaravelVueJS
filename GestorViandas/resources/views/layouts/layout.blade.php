@@ -4,20 +4,36 @@
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>{{  config('app.name') }}</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        @include('layouts.nav')
+    </div>
+</nav>
 <div class="container-fluid" style="margin-top: 100px">
-
     @yield('content')
 </div>
+
 <style type="text/css">
     .table {
         border-top: 2px solid #ccc;
+    }
 
+    .centered {
+        margin: auto;
+        max-width: 75%;
+    }
+
+    .row>.col-xs-6 {
+        margin-left: auto;
+        margin-right: auto;
+        float: none !important;
     }
 </style>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
+
 </html>

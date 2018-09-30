@@ -42,8 +42,7 @@ class ViandaController extends Controller
         $this->validate($request,[
             'nombre'=>'required',
             'descripcion'=>'required',
-            'precio'=>'required',
-            'vegetariana'=>'required'
+            'precio'=>'required'
         ]);
         Vianda::create($request->all());
         return redirect()->route('vianda.index')->with('success','Vianda creada satisfactoriamente');
@@ -86,8 +85,7 @@ class ViandaController extends Controller
         $this->validate($request,[
             'nombre'=>'required',
             'descripcion'=>'required',
-            'precio'=>'required',
-            'vegetariana' => 'required'
+            'precio'=>'required'
         ]);
 
         Vianda::find($id)->update($request->all());
